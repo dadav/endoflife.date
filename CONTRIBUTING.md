@@ -351,6 +351,16 @@ You can visit <https://github.com/endoflife-date/endoflife.date/new/master/produ
 If you're using an IDE like `vscode` or `vim` (or any other IDE that support jsonschema validation),
 you can use [this jsonschema](./product-schema.json) to validate the new product.
 
+It's also possible to use [pre-commit](https://pre-commit.com/) [hooks](./.pre-commit-config.yaml) to validate the changed files.
+Install these hook with:
+
+```bash
+pre-commit install
+pre-commit install-hooks
+# You can manually run the hooks with
+# pre-commit run --all-files
+```
+
 For `vscode` you need the [yaml-language-server extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) and this configuration, which will treat files in the `products` directory as `yaml` files and applies [the schema.json](./product-schema.json) file on it:
 
 ```json
