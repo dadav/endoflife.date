@@ -119,3 +119,4 @@ exclude:
   - requirements.txt
   - runtime.txt
   - product-schema.json
+  - scripts
